@@ -1,0 +1,20 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+
+public class Main {
+    public static void main(String []args) throws Exception { //예외처리 필수
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        String str = br.readLine(); //String
+        int num = Integer.parseInt(br.readLine()); // 숫자를 읽을 때        
+        String[] arr = str.split(" ");
+        int[] arr = Arrays.stream(str.split(" ")).mapToInt(Integer::parseInt).toArray();
+
+        br.close();
+        bw.close();
+    }
+}
